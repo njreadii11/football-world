@@ -17,56 +17,56 @@
     </div>
 </div>
 
-<!-- ABOUT -->
-<section>
-    <h2>About Football</h2>
-    <p>
-        Football is one of the most popular sports in the world.
-        It teaches teamwork, discipline, fitness, and leadership.
-        Millions of players across the globe share the same passion for the game.
-    </p>
-</section>
-
 <!-- FORM SECTION -->
 <section id="interest-form">
     <h2>Football Interest Form</h2>
 
-    <form>
+    <form id="footballForm">
         <label>Full Name</label>
-        <input type="text" placeholder="Enter your name" required>
+        <input type="text" required>
 
         <label>Date of Birth</label>
         <input type="date" required>
 
         <label>Residence</label>
-        <input type="text" placeholder="City / Town" required>
+        <input type="text" required>
 
         <label>Which position do you play?</label>
         <select required>
-            <option value="">Select Position</option>
+            <option value="">Select</option>
             <option>Goalkeeper</option>
             <option>Defender</option>
             <option>Midfielder</option>
             <option>Forward</option>
         </select>
 
-        <label>Playing Experience</label>
+        <label>Experience Level</label>
         <select>
             <option>Beginner</option>
             <option>Intermediate</option>
             <option>Advanced</option>
         </select>
 
-        <label>Why are you interested in football?</label>
-        <textarea placeholder="Write here..."></textarea>
-
-        <button type="submit">Submit Form</button>
+        <button type="submit">Submit</button>
     </form>
+
+    <p id="thankYouMsg">✅ Thank you for submitting the form!</p>
 </section>
 
 <footer>
     <p>© 2026 Football Zone | College Project</p>
 </footer>
+
+<script>
+    const form = document.getElementById("footballForm");
+    const message = document.getElementById("thankYouMsg");
+
+    form.addEventListener("submit", function(e) {
+        e.preventDefault(); // page reload stop
+        form.style.display = "none";
+        message.style.display = "block";
+    });
+</script>
 
 </body>
 </html>
