@@ -7,7 +7,7 @@
 </head>
 <body>
 
-  <!-- HERO SECTION -->
+  <!-- HERO -->
   <section class="hero">
     <div class="overlay">
       <h1>Football World</h1>
@@ -15,40 +15,37 @@
     </div>
   </section>
 
-  <!-- ABOUT FOOTBALL -->
+  <!-- ABOUT -->
   <section class="about">
     <h2>About Football</h2>
     <p>
       Football is the most popular sport in the world.
-      It builds discipline, teamwork, fitness, confidence,
-      and teaches players how to work hard and stay focused.
+      It builds discipline, teamwork, fitness, and confidence.
     </p>
   </section>
 
-  <!-- CRISTIANO RONALDO -->
+  <!-- RONALDO -->
   <section class="ronaldo">
     <h2>FOOTBALL GOAT – CRISTIANO RONALDO</h2>
     <p>
-      Cristiano Ronaldo is widely regarded as the GOAT (Greatest Of All Time) in football.
-      His incredible goal-scoring ability, physical strength, speed,
-      discipline, and winning mentality make him one of the greatest players
-      the world has ever seen. Ronaldo’s hard work and dedication continue
-      to inspire millions of young footballers across the globe.
+      Cristiano Ronaldo is widely regarded as the GOAT (Greatest Of All Time).
+      His dedication, discipline, and winning mentality inspire millions
+      of football lovers across the world.
     </p>
   </section>
 
-  <!-- BUTTON (FORM KE UPAR) -->
+  <!-- BUTTON -->
   <section class="form-btn">
-    <a href="#interest-form" class="btn">
+    <button class="btn" onclick="toggleForm()">
       Interested in Football? Fill the Form
-    </a>
+    </button>
   </section>
 
-  <!-- FORM (LAST SECTION) -->
-  <section id="interest-form" class="form-section">
+  <!-- FORM (HIDDEN INITIALLY) -->
+  <section id="interest-form" class="form-section" style="display:none;">
     <h2>Football Interest Form</h2>
 
-    <form onsubmit="showMessage(event)">
+    <form onsubmit="submitForm(event)">
       <input type="text" placeholder="Name" required>
       <input type="date" required>
       <input type="text" placeholder="Residence" required>
@@ -63,15 +60,18 @@
 
       <button type="submit">Submit</button>
     </form>
-
-    <p id="thankyou"></p>
   </section>
 
   <script>
-    function showMessage(e) {
+    function toggleForm() {
+      const form = document.getElementById("interest-form");
+      form.style.display = "block";
+      form.scrollIntoView({ behavior: "smooth" });
+    }
+
+    function submitForm(e) {
       e.preventDefault();
-      document.getElementById("thankyou").innerText =
-        "✅ Thank you for submitting!";
+      window.location.href = "thankyou.html";
     }
   </script>
 
