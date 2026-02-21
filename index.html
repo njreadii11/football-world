@@ -1,72 +1,72 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Football Zone</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <title>Football world</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<!-- HERO SECTION -->
-<div class="hero">
+  <!-- HERO SECTION -->
+  <section class="hero">
     <div class="overlay">
-        <h1>Football Zone</h1>
-        <p>Football is not just a game, it’s a passion</p>
-
-        <a href="#interest-form" class="btn">Interested in Football? Fill the Form</a>
+      <h1>Football World</h1>
+      <p>Football is not just a game, it’s an emotions</p>
+      <a href="#interest-form" class="btn">Interested in Football? Fill the Form</a>
     </div>
-</div>
+  </section>
 
-<!-- FORM SECTION -->
-<section id="interest-form">
+  <!-- ABOUT FOOTBALL -->
+  <section class="about">
+    <h2>About Football</h2>
+    <p>
+      Football is the most popular sport in the world. It teaches teamwork,
+      discipline, fitness, and leadership. Millions of people dream of becoming
+      professional footballers and representing their country.
+    </p>
+  </section>
+
+  <!-- CRISTIANO RONALDO -->
+  <section class="ronaldo">
+    <h2>:contentReference[oaicite:0]{index=0}</h2>
+    <p>
+      Cristiano Ronaldo is one of the greatest football players of all time.
+      He is known for his hard work, discipline, speed, strength, and goal-scoring ability.
+      Ronaldo has inspired millions of young players around the world to believe
+      in themselves and work hard to achieve success.
+    </p>
+  </section>
+
+  <!-- FORM -->
+  <section id="interest-form" class="form-section">
     <h2>Football Interest Form</h2>
 
-    <form id="footballForm">
-        <label>Full Name</label>
-        <input type="text" required>
+    <form onsubmit="showMessage(event)">
+      <input type="text" placeholder="Name" required>
+      <input type="date" required>
+      <input type="text" placeholder="Residence" required>
 
-        <label>Date of Birth</label>
-        <input type="date" required>
+      <select required>
+        <option value="">Which position do you play?</option>
+        <option>Goalkeeper</option>
+        <option>Defender</option>
+        <option>Midfielder</option>
+        <option>Forward</option>
+      </select>
 
-        <label>Residence</label>
-        <input type="text" required>
-
-        <label>Which position do you play?</label>
-        <select required>
-            <option value="">Select</option>
-            <option>Goalkeeper</option>
-            <option>Defender</option>
-            <option>Midfielder</option>
-            <option>Forward</option>
-        </select>
-
-        <label>Experience Level</label>
-        <select>
-            <option>Beginner</option>
-            <option>Intermediate</option>
-            <option>Advanced</option>
-        </select>
-
-        <button type="submit">Submit</button>
+      <button type="submit">Submit</button>
     </form>
 
-    <p id="thankYouMsg">✅ Thank you for submitting the form!</p>
-</section>
+    <p id="thankyou"></p>
+  </section>
 
-<footer>
-    <p>© 2026 Football Zone | College Project</p>
-</footer>
-
-<script>
-    const form = document.getElementById("footballForm");
-    const message = document.getElementById("thankYouMsg");
-
-    form.addEventListener("submit", function(e) {
-        e.preventDefault(); // page reload stop
-        form.style.display = "none";
-        message.style.display = "block";
-    });
-</script>
+  <script>
+    function showMessage(event) {
+      event.preventDefault();
+      document.getElementById("thankyou").innerText =
+        "✅ Thank you for submitting the form!";
+    }
+  </script>
 
 </body>
 </html>
