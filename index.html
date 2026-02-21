@@ -1,68 +1,8 @@
-<body>
-
-  <!-- HERO SECTION -->
-  <section class="hero">
-    <div class="overlay">
-      <h1>Football World</h1>
-      <p>Football is not just a game, it’s an emotion</p>
-      <a href="#interest-form" class="btn">Interested in Football? Fill the Form</a>
-    </div>
-  </section>
-
-  <!-- ABOUT FOOTBALL -->
-  <section class="about">
-    <h2>About Football</h2>
-    <p>
-      Football is the most popular sport in the world. It builds discipline,
-      teamwork, fitness, and confidence. It connects millions of people globally.
-    </p>
-  </section>
-
-  <!-- CRISTIANO RONALDO -->
-  <section class="ronaldo">
-    <h2>:contentReference[oaicite:0]{index=0}</h2>
-    <p>
-      Cristiano Ronaldo is one of the greatest footballers of all time.
-      His dedication, hard work, and winning mindset inspire millions of young players.
-    </p>
-  </section>
-
-  <!-- FORM (AB SABSE NEECHE) -->
-  <section id="interest-form" class="form-section">
-    <h2>Football Interest Form</h2>
-
-    <form onsubmit="showMessage(event)">
-      <input type="text" placeholder="Name" required>
-      <input type="date" required>
-      <input type="text" placeholder="Residence" required>
-
-      <select required>
-        <option value="">Which position do you play?</option>
-        <option>Goalkeeper</option>
-        <option>Defender</option>
-        <option>Midfielder</option>
-        <option>Forward</option>
-      </select>
-
-      <button type="submit">Submit</button>
-    </form>
-
-    <p id="thankyou"></p>
-  </section>
-
-  <script>
-    function showMessage(event) {
-      event.preventDefault();
-      document.getElementById("thankyou").innerText =
-        "✅ Thank you for submitting!";
-    }
-  </script>
-
-</body><!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Football world</title>
+  <title>Football World</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -71,31 +11,40 @@
   <section class="hero">
     <div class="overlay">
       <h1>Football World</h1>
-      <p>Football is not just a game, it’s an emotions</p>
+      <p>Football is not just a game, it’s an emotion</p>
+    </div>
+  </section>
+
   <!-- ABOUT FOOTBALL -->
   <section class="about">
     <h2>About Football</h2>
     <p>
-      Football is the most popular sport in the world. It teaches teamwork,
-      discipline, fitness, and leadership. Millions of people dream of becoming
-      professional footballers and representing their country.
+      Football is the most popular sport in the world.
+      It builds discipline, teamwork, fitness, confidence,
+      and teaches players how to work hard and stay focused.
     </p>
   </section>
 
   <!-- CRISTIANO RONALDO -->
   <section class="ronaldo">
-    <h2>:CRISTIANO RONALDO</h2>
+    <h2>FOOTBALL GOAT – CRISTIANO RONALDO</h2>
     <p>
-      Cristiano Ronaldo is one of the greatest football players of all time.
-      He is known for his hard work, discipline, speed, strength, and goal-scoring ability.
-      Ronaldo has inspired millions of young players around the world to believe
-      in themselves and work hard to achieve success.
+      Cristiano Ronaldo is widely regarded as the GOAT (Greatest Of All Time) in football.
+      His incredible goal-scoring ability, physical strength, speed,
+      discipline, and winning mentality make him one of the greatest players
+      the world has ever seen. Ronaldo’s hard work and dedication continue
+      to inspire millions of young footballers across the globe.
     </p>
   </section>
- <a href="#interest-form" class="btn">Interested in Football? Fill the Form</a>
-    </div>
+
+  <!-- BUTTON (FORM KE UPAR) -->
+  <section class="form-btn">
+    <a href="#interest-form" class="btn">
+      Interested in Football? Fill the Form
+    </a>
   </section>
-  <!-- FORM -->
+
+  <!-- FORM (LAST SECTION) -->
   <section id="interest-form" class="form-section">
     <h2>Football Interest Form</h2>
 
@@ -119,8 +68,8 @@
   </section>
 
   <script>
-    function showMessage(event) {
-      event.preventDefault();
+    function showMessage(e) {
+      e.preventDefault();
       document.getElementById("thankyou").innerText =
         "✅ Thank you for submitting!";
     }
