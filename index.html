@@ -3,77 +3,164 @@
 <head>
   <meta charset="UTF-8">
   <title>Football World</title>
-  <link rel="stylesheet" href="style.css">
+
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+    }
+
+    /* HERO SECTION */
+    .hero {
+      height: 100vh;
+      background: url("your-photo.jpg") no-repeat center center/cover;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .overlay {
+      background: rgba(0,0,0,0.6);
+      color: white;
+      padding: 40px;
+      text-align: center;
+      border-radius: 10px;
+    }
+
+    .overlay h1 {
+      font-size: 48px;
+      margin-bottom: 10px;
+    }
+
+    .overlay p {
+      font-size: 18px;
+      margin-bottom: 20px;
+    }
+
+    .btn {
+      background: green;
+      color: white;
+      padding: 12px 20px;
+      text-decoration: none;
+      font-weight: bold;
+      border-radius: 5px;
+      display: inline-block;
+    }
+
+    /* COMMON SECTIONS */
+    section {
+      padding: 60px 20px;
+      max-width: 900px;
+      margin: auto;
+    }
+
+    h2 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    /* RONALDO */
+    .insta-link {
+      text-align: center;
+      margin-top: 15px;
+    }
+
+    .insta-link a {
+      color: #E1306C;
+      font-weight: bold;
+      text-decoration: none;
+    }
+
+    /* FORM */
+    .form-section {
+      background: #f4f4f4;
+      padding: 60px 20px;
+    }
+
+    form {
+      max-width: 400px;
+      margin: auto;
+      display: flex;
+      flex-direction: column;
+    }
+
+    input, select, button {
+      padding: 10px;
+      margin: 10px 0;
+      font-size: 16px;
+    }
+
+    button {
+      background: green;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background: darkgreen;
+    }
+  </style>
 </head>
+
 <body>
 
-  <!-- HERO -->
-  <section class="hero">
-    <div class="overlay">
-      <h1>Football World</h1>
-      <p>Football is not just a game, it’s an emotion</p>
-    </div>
-  </section>
+<!-- HERO -->
+<section class="hero">
+  <div class="overlay">
+    <h1>Football World</h1>
+    <p>Football is not just a game, it’s an emotion</p>
+    <a href="#interest-form" class="btn">Interested in Football? Fill the Form</a>
+  </div>
+</section>
 
-  <!-- ABOUT -->
-  <section class="about">
-    <h2>About Football</h2>
-    <p>
-      Football is the most popular sport in the world.
-      It builds discipline, teamwork, fitness, and confidence.
-    </p>
-  </section>
+<!-- ABOUT FOOTBALL -->
+<section>
+  <h2>About Football</h2>
+  <p>
+    Football is the most popular sport in the world. It teaches teamwork,
+    discipline, fitness, leadership, and confidence. Millions of people
+    across the globe play and love football.
+  </p>
+</section>
 
-  <!-- RONALDO -->
-  <section class="ronaldo">
-    <h2>FOOTBALL GOAT – CRISTIANO RONALDO</h2>
-    <p>
-      Cristiano Ronaldo is widely regarded as the GOAT (Greatest Of All Time).
-      His dedication, discipline, and winning mentality inspire millions
-      of football lovers across the world.
-    </p>
-  </section>
+<!-- CRISTIANO RONALDO -->
+<section>
+  <h2>FOOTBALL GOAT – :CRISTIANO RONALDO</h2>
+  <p>
+    Cristiano Ronaldo is widely regarded as the GOAT (Greatest Of All Time) in football.
+    His incredible goal-scoring ability, physical fitness, speed, discipline,
+    and winning mentality make him one of the greatest players ever.
+    His journey inspires millions of young footballers worldwide.
+  </p>
 
-  <!-- BUTTON -->
-  <section class="form-btn">
-    <button class="btn" onclick="toggleForm()">
-      Interested in Football? Fill the Form
-    </button>
-  </section>
+  <div class="insta-link">
+    👉 Follow him on Instagram:
+    <a href="https://www.instagram.com/cristiano?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==/" target="_blank">@cristiano</a>
+  </div>
+</section>
 
-  <!-- FORM (HIDDEN INITIALLY) -->
-  <section id="interest-form" class="form-section" style="display:none;">
-    <h2>Football Interest Form</h2>
+<!-- FORM (LAST) -->
+<section id="interest-form" class="form-section">
+  <h2>Football Interest Form</h2>
 
-    <form onsubmit="submitForm(event)">
-      <input type="text" placeholder="Name" required>
-      <input type="date" required>
-      <input type="text" placeholder="Residence" required>
+  <form action="thankyou.html">
+    <input type="text" placeholder="Name" required>
+    <input type="date" required>
+    <input type="text" placeholder="Residence" required>
 
-      <select required>
-        <option value="">Which position do you play?</option>
-        <option>Goalkeeper</option>
-        <option>Defender</option>
-        <option>Midfielder</option>
-        <option>Forward</option>
-      </select>
+    <select required>
+      <option value="">Which position do you play?</option>
+      <option>Goalkeeper</option>
+      <option>Defender</option>
+      <option>Midfielder</option>
+      <option>Forward</option>
+    </select>
 
-      <button type="submit">Submit</button>
-    </form>
-  </section>
-
-  <script>
-    function toggleForm() {
-      const form = document.getElementById("interest-form");
-      form.style.display = "block";
-      form.scrollIntoView({ behavior: "smooth" });
-    }
-
-    function submitForm(e) {
-      e.preventDefault();
-      window.location.href = "thankyou.html";
-    }
-  </script>
+    <button type="submit">Submit</button>
+  </form>
+</section>
 
 </body>
 </html>
