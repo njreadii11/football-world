@@ -3,18 +3,95 @@
 <head>
   <meta charset="UTF-8">
   <title>Football World</title>
-  <link rel="stylesheet" href="style.css">
+
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #f5f5f5;
+      color: #000;
+      text-align: center;
+    }
+
+    /* HERO */
+    .hero {
+      height: 100vh;
+      background: #666;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .hero-box {
+      background: rgba(0,0,0,0.5);
+      padding: 40px;
+      border-radius: 10px;
+      color: #fff;
+    }
+
+    .hero-box h1 {
+      font-size: 40px;
+      margin-bottom: 10px;
+    }
+
+    .hero-box p {
+      font-size: 18px;
+      margin-bottom: 25px;
+    }
+
+    /* SECTIONS */
+    section {
+      padding: 60px 20px;
+    }
+
+    h2 {
+      margin-bottom: 15px;
+    }
+
+    /* FORM LINK BUTTON */
+    .form-link-wrapper {
+      text-align: center;
+      margin: 40px 0;
+    }
+
+    .form-link-btn {
+      display: inline-block;
+      background-color: #0a8f08;
+      color: white;
+      padding: 14px 30px;
+      font-size: 16px;
+      font-weight: bold;
+      text-decoration: none;
+      border-radius: 6px;
+      transition: 0.3s;
+    }
+
+    .form-link-btn:hover {
+      background-color: #066b05;
+      transform: scale(1.05);
+    }
+
+    /* INSTAGRAM LINK */
+    .insta-link a {
+      color: #c13584;
+      font-weight: bold;
+      text-decoration: none;
+    }
+  </style>
 </head>
+
 <body>
 
-  <!-- HERO -->
+  <!-- HERO SECTION -->
   <section class="hero">
-    <h1>Football World</h1>
-    <p>Football is not just a game, it’s an emotion</p>
+    <div class="hero-box">
+      <h1>Football World</h1>
+      <p>Football is not just a game, it’s an emotion</p>
+    </div>
   </section>
 
   <!-- ABOUT FOOTBALL -->
-  <section class="about">
+  <section>
     <h2>About Football</h2>
     <p>
       Football is the most popular sport in the world.
@@ -23,24 +100,26 @@
   </section>
 
   <!-- CRISTIANO RONALDO -->
-  <section class="ronaldo">
+  <section>
     <h2>FOOTBALL GOAT – CRISTIANO RONALDO</h2>
     <p>
       Cristiano Ronaldo is widely regarded as the GOAT (Greatest Of All Time).
-      His dedication, discipline, hard work, speed, and winning mentality
+      His dedication, discipline, speed, hard work, and winning mentality
       inspire millions of young footballers across the world.
     </p>
 
-    <p class="insta">
+    <div class="insta-link">
       👉 Follow him on Instagram:
       <a href="https://www.instagram.com/cristiano/" target="_blank">@cristiano</a>
-    </p>
+    </div>
   </section>
 
-  <!-- FORM LINK (NEECHE SIMPLE LINK) -->
-  <section class="form-link">
-    <a href="form.html">Interested in Football? Fill the Form</a>
-  </section>
+  <!-- FORM LINK (CENTER & COLORED) -->
+  <div class="form-link-wrapper">
+    <a href="form.html" class="form-link-btn">
+      Interested in Football? Fill the Form
+    </a>
+  </div>
 
 </body>
 </html>
