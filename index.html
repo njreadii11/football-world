@@ -2,12 +2,71 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Football World</title>
+    <title>Football Zone</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<h1>Football World</h1>
-<p>Welcome to my football website</p>
+<!-- HERO SECTION -->
+<div class="hero">
+    <div class="overlay">
+        <h1>Football Zone</h1>
+        <p>Football is not just a game, it’s a passion</p>
+
+        <a href="#interest-form" class="btn">Interested in Football? Fill the Form</a>
+    </div>
+</div>
+
+<!-- ABOUT -->
+<section>
+    <h2>About Football</h2>
+    <p>
+        Football is one of the most popular sports in the world.
+        It teaches teamwork, discipline, fitness, and leadership.
+        Millions of players across the globe share the same passion for the game.
+    </p>
+</section>
+
+<!-- FORM SECTION -->
+<section id="interest-form">
+    <h2>Football Interest Form</h2>
+
+    <form>
+        <label>Full Name</label>
+        <input type="text" placeholder="Enter your name" required>
+
+        <label>Date of Birth</label>
+        <input type="date" required>
+
+        <label>Residence</label>
+        <input type="text" placeholder="City / Town" required>
+
+        <label>Which position do you play?</label>
+        <select required>
+            <option value="">Select Position</option>
+            <option>Goalkeeper</option>
+            <option>Defender</option>
+            <option>Midfielder</option>
+            <option>Forward</option>
+        </select>
+
+        <label>Playing Experience</label>
+        <select>
+            <option>Beginner</option>
+            <option>Intermediate</option>
+            <option>Advanced</option>
+        </select>
+
+        <label>Why are you interested in football?</label>
+        <textarea placeholder="Write here..."></textarea>
+
+        <button type="submit">Submit Form</button>
+    </form>
+</section>
+
+<footer>
+    <p>© 2026 Football Zone | College Project</p>
+</footer>
 
 </body>
 </html>
