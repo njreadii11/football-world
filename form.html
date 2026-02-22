@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Football Interest Form</title>
+  <title>Football Form</title>
 
   <style>
     body {
@@ -40,6 +40,7 @@
       border-radius: 6px;
       border: 1px solid #ccc;
       font-size: 14px;
+      color: #333;
     }
 
     form input:focus,
@@ -47,6 +48,14 @@
       outline: none;
       border-color: #0a8f08;
       box-shadow: 0 0 6px rgba(10,143,8,0.5);
+    }
+
+    .label {
+      text-align: left;
+      font-size: 13px;
+      margin-bottom: 5px;
+      color: #333;
+      font-weight: bold;
     }
 
     button {
@@ -78,11 +87,12 @@
 <body>
 
   <div class="form-container">
-    <h1>Football Interest Form</h1>
+    <h1>Football Form</h1>
 
     <form action="thankyou.html">
       <input type="text" placeholder="Full Name" required>
 
+      <div class="label">Date of Birth</div>
       <input type="date" required>
 
       <input type="text" placeholder="Residence" required>
@@ -108,4 +118,4 @@
   </div>
 
 </body>
-</html>
+</html></html>
