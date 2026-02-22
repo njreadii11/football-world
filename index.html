@@ -2,21 +2,25 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Football World</title>
+  <title>Welcome to Football World</title>
 
   <style>
     body {
       margin: 0;
       font-family: Arial, sans-serif;
-      background: #f5f5f5;
-      color: #000;
+      color: #fff;
       text-align: center;
     }
 
-    /* HERO */
+    /* HERO WITH IMAGE BACKGROUND */
     .hero {
       height: 100vh;
-      background: #666;
+      background: 
+        linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
+        url("bg.jpg");
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
       display: flex;
       justify-content: center;
       align-items: center;
@@ -26,32 +30,30 @@
       background: rgba(0,0,0,0.5);
       padding: 40px;
       border-radius: 10px;
-      color: #fff;
     }
 
     .hero-box h1 {
-      font-size: 40px;
+      font-size: 42px;
       margin-bottom: 10px;
     }
 
     .hero-box p {
       font-size: 18px;
-      margin-bottom: 25px;
     }
 
-    /* SECTIONS */
     section {
       padding: 60px 20px;
+      background: #111;
     }
 
     h2 {
       margin-bottom: 15px;
     }
 
-    /* FORM LINK BUTTON */
     .form-link-wrapper {
       text-align: center;
-      margin: 40px 0;
+      padding: 40px 0;
+      background: #000;
     }
 
     .form-link-btn {
@@ -71,9 +73,8 @@
       transform: scale(1.05);
     }
 
-    /* INSTAGRAM LINK */
     .insta-link a {
-      color: #c13584;
+      color: #00ff88;
       font-weight: bold;
       text-decoration: none;
     }
@@ -82,15 +83,13 @@
 
 <body>
 
-  <!-- HERO SECTION -->
   <section class="hero">
     <div class="hero-box">
-      <h1>Football World</h1>
+      <h1>Welcome to Football World</h1>
       <p>Football is not just a game, it’s an emotion</p>
     </div>
   </section>
 
-  <!-- ABOUT FOOTBALL -->
   <section>
     <h2>About Football</h2>
     <p>
@@ -99,13 +98,10 @@
     </p>
   </section>
 
-  <!-- CRISTIANO RONALDO -->
   <section>
     <h2>FOOTBALL GOAT – CRISTIANO RONALDO</h2>
     <p>
-      Cristiano Ronaldo is widely regarded as the GOAT (Greatest Of All Time).
-      His dedication, discipline, speed, hard work, and winning mentality
-      inspire millions of young footballers across the world.
+      Cristiano Ronaldo inspires millions with his hard work and dedication.
     </p>
 
     <div class="insta-link">
@@ -114,7 +110,6 @@
     </div>
   </section>
 
-  <!-- FORM LINK (CENTER & COLORED) -->
   <div class="form-link-wrapper">
     <a href="form.html" class="form-link-btn">
       Interested in Football? Fill the Form
