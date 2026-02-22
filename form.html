@@ -8,7 +8,14 @@
     body {
       margin: 0;
       font-family: Arial, sans-serif;
-      background: linear-gradient(135deg, #0a8f08, #004d00);
+
+      /* Background Image */
+      background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
+                  url("bg.jpeg");
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+
       min-height: 100vh;
       display: flex;
       justify-content: center;
@@ -16,12 +23,12 @@
     }
 
     .form-container {
-      background: #ffffff;
+      background: rgba(255,255,255,0.95);
       padding: 40px 35px;
       border-radius: 12px;
       width: 100%;
       max-width: 420px;
-      box-shadow: 0 15px 40px rgba(0,0,0,0.3);
+      box-shadow: 0 15px 40px rgba(0,0,0,0.4);
       text-align: center;
     }
 
@@ -40,7 +47,6 @@
       border-radius: 6px;
       border: 1px solid #ccc;
       font-size: 14px;
-      color: #333;
     }
 
     form input:focus,
@@ -50,12 +56,27 @@
       box-shadow: 0 0 6px rgba(10,143,8,0.5);
     }
 
-    .label {
+    .dob-label {
       text-align: left;
-      font-size: 13px;
+      font-size: 14px;
       margin-bottom: 5px;
-      color: #333;
       font-weight: bold;
+      color: #333;
+    }
+
+    .dob-group {
+      display: flex;
+      gap: 10px;
+      margin-bottom: 15px;
+    }
+
+    .dob-group select {
+      flex: 1;
+      padding: 12px;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+      font-size: 14px;
+      color: #333;
     }
 
     button {
@@ -79,7 +100,7 @@
     .note {
       margin-top: 15px;
       font-size: 13px;
-      color: #555;
+      color: #333;
     }
   </style>
 </head>
@@ -87,13 +108,49 @@
 <body>
 
   <div class="form-container">
-    <h1>Football Form</h1>
+    <h1>Interested One's fill the Form</h1>
 
     <form action="thankyou.html">
+
       <input type="text" placeholder="Full Name" required>
 
-      <div class="label">Date of Birth</div>
-      <input type="date" required>
+      <div class="dob-label">Date of Birth</div>
+
+      <div class="dob-group">
+        <select required>
+          <option value="">Day</option>
+          <script>
+            for (let i = 1; i <= 31; i++) {
+              document.write(`<option value="${i}">${i}</option>`);
+            }
+          </script>
+        </select>
+
+        <select required>
+          <option value="">Month</option>
+          <option>January</option>
+          <option>February</option>
+          <option>March</option>
+          <option>April</option>
+          <option>May</option>
+          <option>June</option>
+          <option>July</option>
+          <option>August</option>
+          <option>September</option>
+          <option>October</option>
+          <option>November</option>
+          <option>December</option>
+        </select>
+
+        <select required>
+          <option value="">Year</option>
+          <script>
+            for (let y = 2026; y >= 1980; y--) {
+              document.write(`<option value="${y}">${y}</option>`);
+            }
+          </script>
+        </select>
+      </div>
 
       <input type="text" placeholder="Residence" required>
 
@@ -110,12 +167,14 @@
       </select>
 
       <button type="submit">Submit</button>
+
     </form>
 
     <div class="note">
       Your information is safe with us ⚽
     </div>
+
   </div>
 
 </body>
-</html></html>
+</html>
